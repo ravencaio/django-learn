@@ -1,12 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blog de Caio</title>
+    <style>
+        table, th, td{
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+    </style>
+
 </head>
 <body>
-    <p><h1>Olá html</h1></p>
-    {{posts}}
+    <h1>BLOG DO CAIO</h1>
+    <table>
+        <tr>
+            <th>Usuario</th>
+            <th>Data Publicada</th>
+            <th>Título</th>
+            <th>Texto</th>
+        </tr>
+        {% for post in posts %}
+            <tr>
+                <td>{{ post.author }}</td>
+                <td>{{ post.created_date }}</td>
+                <td>{{ post.title }}</td>
+                <td>{{ post.text }}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+
 </body>
 </html>
