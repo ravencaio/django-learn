@@ -10,10 +10,16 @@
 
 </head>
 <body>
-    <h1><a href="/post_new">BLOG DO CAIO</a></h1>
+    <h1><a href="/">BLOG DO CAIO</a></h1>
+    <p><a href="/post_new/">
+    <img src = "{% static 'polls/images/new-post.png' %}" alt = "Novo Post" width="40" height="40"></img>
+    </a></p>
     <table>
-        {% block postsimple %}
-        <h1>Não há posts</h1>
+        {% block post_simple %}
+        {% endblock %}
+        {% block post_new %}
+        {% endblock %}
+        {% block post_view %}
         {% endblock %}
 
     </table>

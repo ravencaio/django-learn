@@ -1,0 +1,8 @@
+{% extends 'blog.html' %}
+
+{% block post_view %}
+<h5 style = 'font-weight: normal;'>Autor: {{ post.author }}</h5>
+<h5 style = 'font-weight: normal;'>{{ post.published_date }}</h5>
+<h3>{{ post.title }}</h3>
+<p>{{ post.text }}</p>
+{% endblock %}
