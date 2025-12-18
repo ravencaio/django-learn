@@ -1,6 +1,6 @@
 {% extends 'blog.html' %}
 
-{% block post_simple %}
+{% block content %}
     {% for post in posts %}
         <h1><a href="{% url 'post_view' pk=post.pk %}"> {{ post.title }} </a></h1>
         <h6>{{ post.author }}</h6>

@@ -1,11 +1,53 @@
-h1 a, h2 a{
-    color: #c25100
+.header {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 2px;
+  top : 0;
+  padding: 20px;
+  background-color: #927d4f;
+  color: white;
+  font-size: 30px;
 }
-body{
-    padding-left: 15%;
 
+.header div{
+  a:link {
+    color: white
+  }
+  text-align: center;
+  background: #ffc444;
+  color: white;
+  padding: 6px;
+  font-size: 20px;
+}
+.title {
+  text-align: center;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+.login {
+  
+}
+
+.content {
+  a:link {
+    color: #00ff80;
+  }
+  a:visisted {
+    color: #520072;
+  }
+  a:hover {
+    color: red;
+  }
+  a:active{
+    color: green;
+  }
+  padding-left: 15%;
+}
+.post_new {
+  padding-left: 70%;
 }
 table, th, td{
     border: 1px solid black;
     border-collapse: collapse;
 }
+

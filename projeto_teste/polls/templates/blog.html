@@ -10,19 +10,28 @@
 
 </head>
 <body>
-    <h1><a href="/">BLOG DO CAIO</a></h1>
-    <p><a href="/post_new/">
-    <img src = "{% static 'polls/images/new-post.png' %}" alt = "Novo Post" width="40" height="40"></img>
-    </a></p>
-    <table>
-        {% block post_simple %}
-        {% endblock %}
-        {% block post_new %}
-        {% endblock %}
-        {% block post_view %}
-        {% endblock %}
+    <div class="header">
+        <div class="title">
+            <h1><a href="/">BLOG DO CAIO</a></h1>
+        </div>
+        <div>
+            <p><a href="/post_new/">
+            <img src = "{% static 'polls/images/new-post.png' %}" alt = "Novo Post" width="40" height="40"></img>
+            </a></p>
+        </div>
+        <div class="login">
+            {% if user.is_authenticated %}
+                Olá {{ user.username }} === <a href="/logout/">Sair</a>
+            {% else %}
+                <a href="/login/">Entrar</a>
+            {% endif %}
+        </div>
+    </div>
+    <div class="content">
+        {% block content %}
+        {% endblock %}    
+    </div>
 
-    </table>
 
 
 </body>

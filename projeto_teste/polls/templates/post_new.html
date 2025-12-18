@@ -1,5 +1,5 @@
 {% extends 'blog.html' %}
-{% block post_new %}
+{% block content %}
 <form method="post">
     {% csrf_token %}
     {% for field in form %}

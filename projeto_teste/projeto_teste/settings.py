@@ -56,7 +56,7 @@ ROOT_URLCONF = "projeto_teste.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [BASE_DIR / 'templates', BASE_DIR / 'polls/templates'],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -122,3 +122,5 @@ STATIC_URL = "BASE_DIR/static/"
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+LOGIN_REDIRECT_URL = "/"
